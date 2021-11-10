@@ -16,7 +16,7 @@ public class Grade {
         String input = scan.nextLine();
         input = input.toUpperCase();
         if (input.startsWith("A") || input.startsWith("B") || input.startsWith("C") || input.startsWith("D") || input.startsWith("F")) {
-            getLetterGrade(input);
+            System.out.println("The letter grade entered converted into its numerical value is: " + getLetterGrade(input));
         } else {
             System.out.println("Bad input");
         }
