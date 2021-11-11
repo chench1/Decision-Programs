@@ -19,7 +19,7 @@ public class Quadratic {
 
     public boolean hasSolutions() {
 
-        return discriminant > 0;
+        return discriminant >= 0;
     }
 
     private void calculateRoots() {

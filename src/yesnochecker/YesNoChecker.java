@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class YesNoChecker {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Do you want to continue?");
+        System.out.println("This program will ask if you want the program to continue. Do you want to continue?");
         String input = scan.nextLine();
         if (input.equalsIgnoreCase("N")) {
             System.out.println("Program Terminating");

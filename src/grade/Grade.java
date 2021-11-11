@@ -2,17 +2,16 @@ package grade;
 /*
 Author - Charles Chen
 Date - 11/10/2021
-Purpose - This program will translate a letter grade into a numerical grade
+Purpose - The user inputs their letter grade and this program will translate the letter grade into a numerical grade.
 */
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Grade {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("This program will convert the letter grade into a numerical grade. Please enter a letter grade: ");
+        System.out.println("This program will convert the letter grade into a numerical grade. Valid inputs are Please enter a letter grade: ");
         String input = scan.nextLine();
         input = input.toUpperCase();
         if (input.startsWith("A") || input.startsWith("B") || input.startsWith("C") || input.startsWith("D") || input.startsWith("F")) {
