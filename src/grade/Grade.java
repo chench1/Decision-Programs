@@ -24,15 +24,18 @@ public class Grade {
 
     public static double getLetterGrade(String grade) {
         Map<Character, Double> gradeToNumber =  setMap();
+        if (grade.length() == 1) {
+            return gradeToNumber.get(grade.charAt(0));
+        }
         if (grade.charAt(1) == '+') {
             if (grade.charAt(0) == 'A') {
                 return 4.0;
             }
             return gradeToNumber.get(grade.charAt(0))+ .3;
-        } else if (grade.charAt(1) == '-') {
-            return gradeToNumber.get(grade.charAt(0))-.3;
+        } else if (grade.charAt(0) == 'F') {
+            return 0;
         } else {
-            return gradeToNumber.get(grade.charAt(0));
+            return gradeToNumber.get(grade.charAt(0))-.3;
         }
     }
 
