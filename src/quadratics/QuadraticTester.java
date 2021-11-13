@@ -23,7 +23,7 @@ public class QuadraticTester {
         if (!quadratic.hasSolutions()) {
             System.out.println("This quadratic has no real solutions");
         } else {
-            if (quadratic.getSolution1() == quadratic.getSolution2()) {
+            if (quadratic.getOneSolution()) {
                 System.out.println("This quadratics only solution is " + quadratic.getSolution1());
             } else {
                 System.out.println("The two solutions are: " + quadratic.getSolution1() + " and " + quadratic.getSolution2());

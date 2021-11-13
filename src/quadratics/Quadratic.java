@@ -9,6 +9,7 @@ a, b and c in ax^2 + bx + c. Also contains methods that calculate the discrimina
 
 public class Quadratic {
     private double a, b ,c, discriminant, smallRoot, largeRoot;
+    boolean oneSolution = false;
     public Quadratic(double a, double b, double c) {
         this.a = a;
         this.b = b;
@@ -18,8 +19,8 @@ public class Quadratic {
     }
 
     public boolean hasSolutions() {
-
-        return discriminant > 0;
+        oneSolution = discriminant == 0;
+        return discriminant >= 0;
     }
 
     private void calculateRoots() {
@@ -43,5 +44,9 @@ public class Quadratic {
 
     public double getSolution2() {
         return largeRoot;
+    }
+
+    public boolean getOneSolution() {
+        return oneSolution;
     }
 }
