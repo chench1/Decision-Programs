@@ -11,10 +11,14 @@ import java.util.Scanner;
 public class Grade {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("This program will convert the letter grade into a numerical grade. Valid inputs are Please enter a letter grade: ");
+        System.out.println("This program will convert the letter grade into a numerical grade. Valid inputs include 'A', 'B', 'C', 'D' and 'F'. Please enter a letter grade: ");
         String input = scan.nextLine();
         input = input.toUpperCase();
-        if (input.startsWith("A") || input.startsWith("B") || input.startsWith("C") || input.startsWith("D") || input.startsWith("F")) {
+        if (input.startsWith("A") || input.startsWith("B") || input.startsWith("C") || input.startsWith("D") || (input.startsWith("F"))) {
+            if ((input.charAt(1) == '+' || input.charAt(1) == '-') && input.startsWith("F")) {
+                System.out.println("Bad input. F- or F+ is not a valid input");
+                return;
+            }
             System.out.println("The letter grade entered converted into its numerical value is: " + getLetterGrade(input));
         } else {
             System.out.println("Bad input");
@@ -39,7 +43,6 @@ public class Grade {
     }
 
     public static Map<Character, Double> setMap() {
-
         return Map.of(
                 'A', 4.0,
                 'B', 3.0,
